@@ -53,17 +53,27 @@ const navNames = {
   "nav-item-5": "About",
   "nav-item-6": "Contact",
 }
-document.querySelector("nav a:nth-of-type(1)").textContent = "Services";
-document.querySelector("nav a:nth-of-type(2)").textContent = "Product";
-document.querySelector("nav a:nth-of-type(3)").textContent = "Vision";
-document.querySelector("nav a:nth-of-type(4)").textContent = "Features";
-document.querySelector("nav a:nth-of-type(5)").textContent = "About";
-document.querySelector("nav a:nth-of-type(6)").textContent = "Contact";
+const services = document.querySelector("nav a:nth-of-type(1)")
+services.textContent = "Services";
+const product = document.querySelector("nav a:nth-of-type(2)")
+product.textContent = "Product";
+const vision = document.querySelector("nav a:nth-of-type(3)")
+vision.textContent = "Vision";
+const features = document.querySelector("nav a:nth-of-type(4)")
+features.textContent = "Features";
+const about = document.querySelector("nav a:nth-of-type(5)")
+about.textContent = "About";
+const contact = document.querySelector("nav a:nth-of-type(6)")
+contact.textContent = "Contact";
 
-navBar.classList.add("italic");
+services.classList.add("italic");
+product.classList.add("italic");
+vision.classList.add("italic");
+features.classList.add("italic");
+about.classList.add("italic");
+contact.classList.add("italic");
 
 const linksArray = Array.from(navLinks);
-console.log(linksArray);
 navBar.style.fontStyle = 'italic'
 navBar.style.fontSize = '1.3rem'
 const logo = document.querySelector('#logo-img')
@@ -71,7 +81,7 @@ logo.setAttribute("src", "http://localhost:9000/img/logo.png")
 
 const titleSection = document.querySelector("cta-text")
 const heading = document.querySelector('h1')
-heading.textContent = 'DOM is Awesome'
+heading.textContent = 'DOM Is Awesome'
 const button = document.querySelector('button')
 button.textContent = 'Get Started'
 const mainPic = document.querySelector('#cta-img')
@@ -81,6 +91,9 @@ mainPic.setAttribute('src', "http://localhost:9000/img/cta.png")
 const topContent = document.querySelectorAll('.top-content h4')
 topContent[0].textContent = siteContent["main-content"]["features-h4"]
 topContent[1].textContent = siteContent["main-content"]["about-h4"]
+const topParag = document.querySelectorAll('.top-content p')
+topParag[0].textContent = siteContent['main-content']['features-content']
+topParag[1].textContent = siteContent['main-content']['about-content']
 
 const lowerPic = document.querySelector('#middle-img')
 lowerPic.setAttribute('src', "http://localhost:9000/img/accent.png")
@@ -89,6 +102,10 @@ const lowerContent = document.querySelectorAll('.bottom-content h4')
 lowerContent[0].textContent = siteContent["main-content"]["services-h4"];
 lowerContent[1].textContent = siteContent["main-content"]["product-h4"];
 lowerContent[2].textContent = siteContent["main-content"]["vision-h4"];
+const lowerParag = document.querySelectorAll('.bottom-content p')
+lowerParag[0].textContent = siteContent['main-content']['services-content']
+lowerParag[1].textContent = siteContent['main-content']["product-content"]
+lowerParag[2].textContent = siteContent['main-content']["vision-content"]
 
 const contactHeader = document.querySelector(".contact h4")
 contactHeader.textContent = "Contact"
