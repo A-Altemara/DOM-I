@@ -78,8 +78,26 @@ const mainPic = document.querySelector('#cta-img')
 mainPic.setAttribute('src', "http://localhost:9000/img/cta.png")
 
 
+const topContent = document.querySelectorAll('.top-content h4')
+topContent[0].textContent = siteContent["main-content"]["features-h4"]
+topContent[1].textContent = siteContent["main-content"]["about-h4"]
+
+const lowerPic = document.querySelector('#middle-img')
+lowerPic.setAttribute('src', "http://localhost:9000/img/accent.png")
+
+const lowerContent = document.querySelectorAll('.bottom-content h4')
+lowerContent[0].textContent = siteContent["main-content"]["services-h4"];
+lowerContent[1].textContent = siteContent["main-content"]["product-h4"];
+lowerContent[2].textContent = siteContent["main-content"]["vision-h4"];
+
+const contactHeader = document.querySelector(".contact h4")
+contactHeader.textContent = "Contact"
+const contactParag = document.querySelectorAll(".contact p")
+contactParag[0].textContent = "123 Way 456 Street Somewhere, USA"
+contactParag[1].textContent = "1 (888) 888-8888"
+contactParag[2].textContent = "sales@greatidea.io"
 
 
-
-
-
+const footerA = document.querySelector("footer a")
+footerA.textContent = "Copyright Great Idea! 2021"
+footerA.setAttribute('class', 'bold')
